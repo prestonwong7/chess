@@ -24,6 +24,11 @@ void Board::setup() {
 bool Board::move(const std::string& from, const std::string& to) {
     int startX, startY, endX, endY;
 
+    // FIRST convert strings like "e2" to board coordinates
+    if (!algebraicToCoords(from, startY, startX) || !algebraicToCoords(to, endY, endX)) {
+        return false; // invalid input like "z9"
+    }
+
     if (!inBounds(startX, startY) || !inBounds(endX, endY)) {
         return false; // Out of bounds
     }

@@ -1,1 +1,6 @@
+# Ignore build files
+CMakeFiles/
+build/
+build.ninja
+cmake_install.cmake
 chess.exe

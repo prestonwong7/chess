@@ -29,6 +29,7 @@ int main()
             std::cout << "Move successful." << std::endl;
         }
 
-        return 0;
     }
+    
+    return 0;
 }
