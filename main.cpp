@@ -3,6 +3,8 @@
 
 int main()
 {
+
+    std::cout << "Welcome to Chess!" << std::endl;
     Board board;
     board.setup();
 

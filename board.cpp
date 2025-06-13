@@ -45,14 +45,20 @@ bool Board::move(const std::string& from, const std::string& to) {
 void Board::print() const {
     for (int i = 0; i < 8; ++i) {
         std::cout << 8 - i << " "; // Print row numbers
+
         for (int j = 0; j < 8; ++j) {
             if (squares[i][j]) {
                 std::cout << squares[i][j]->symbol() << " ";
             } else {
                 std::cout << ". ";
             }
-            std::cout << "\n";
+            
         }
-        std::cout << "  a b c d e f g h\n"; // Print column letters
+        std::cout << "\n";
     }
+    std::cout << "  a b c d e f g h\n"; // Print column letters
+}
+
+bool Board::inBounds(int x, int y) const {
+    return x >= 0 && x < 8 && y >= 0 && y < 8;
 }
