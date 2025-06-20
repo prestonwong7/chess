@@ -1,0 +1,7 @@
+build/
+Chess
+*.exe
+CMakeFiles/
+*.ninja
+*.o
+.vscode/
